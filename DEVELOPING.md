@@ -24,17 +24,10 @@ npm run lint
 
 - `npm run build` builds the final javascript, typescript declarations, and _typedoc_ documentation into `/dist/`.
 - `npm run build:all` builds all of the above, plus the public website.
-- `npm run build:typedocs` only build typedoc markdown (then used for generating API pages)
 
 ```bash
 npm run build
 ```
-
-## Live stuff
-
-- `npm run build:docs:watch`: this will be live except fro the API section, because it needs
-  the typedoc to also run on changes. (Todo: find a way to refresh typedoc-generated) markdown, then
-  rerun `build:docs`).
 
 ## Committing
 
