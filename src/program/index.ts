@@ -34,6 +34,7 @@ import {
   CreateArgumentOpts,
   CreateOptionProgramOpts,
   CommandConfig,
+  ParserProcessedResult,
 } from "../types"
 import { CaporalValidator } from "../types"
 import { detectVersion } from "../utils/version"
@@ -564,10 +565,10 @@ export class Program extends EventEmitter {
     // parse command line args
     const result = parseArgv(cmd?.getParserConfig(), argv)
 
-    /* 
+    /*
       Run command with parsed args.
       We are forced to catch a potential error to prevent the rejected
-      promise to propagate un in the stack. 
+      promise to propagate un in the stack.
     */
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     return this._run(result, cmd) /*
@@ -606,7 +607,7 @@ export class Program extends EventEmitter {
       // we may not have any associated command, but some global options may have been passed
       // process them, if any
       // Process any global options
-      const processedResult = { ...result, errors: [], args: {} }
+      const processedResult = { ...result, errors: [], args: {} } as ParserProcessedResult;
       const shouldStop = await processGlobalOptions(processedResult, this)
       if (shouldStop) {
         this.emit("run")
