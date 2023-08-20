@@ -3,9 +3,9 @@
  * @internal
  */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import type { TemplateContext, Template } from "../types"
-import { getOptionsTable, getArgumentsTable } from "../utils"
-import sortBy from "lodash/sortBy"
+import type { TemplateContext, Template } from "../types.js"
+import { getOptionsTable, getArgumentsTable } from "../utils.js"
+import sortBy from "lodash/sortBy.js"
 
 export const command: Template = async (ctx: TemplateContext) => {
   const { cmd, globalOptions: globalFlags, eol, eol3, colorize, tpl } = ctx

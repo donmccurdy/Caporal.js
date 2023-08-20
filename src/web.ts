@@ -4,8 +4,8 @@
  */
 ///<amd-module name="@caporal/core"/>
 /// <reference lib="dom" />
-export * from "./index"
-import { program, chalk } from "./index"
+export * from "./index.js"
+import { program, chalk } from "./index.js"
 
 require("expose-loader?process!./utils/web/process")
 

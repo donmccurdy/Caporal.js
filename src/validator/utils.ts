@@ -3,10 +3,10 @@
  * @internal
  */
 
-import type { Validator } from "../types"
-import { CaporalValidator, Argument, Option } from "../types"
-import isNumber from "lodash/isNumber"
-import { InvalidValidatorError } from "../error"
+import type { Validator } from "../types.js"
+import { CaporalValidator, Argument, Option } from "../types.js"
+import isNumber from "lodash/isNumber.js"
+import { InvalidValidatorError } from "../error/index.js"
 
 export function isCaporalValidator(
   validator: Validator | undefined,

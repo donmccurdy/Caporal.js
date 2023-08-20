@@ -2,8 +2,8 @@
  * @packageDocumentation
  * @internal
  */
-import type { TemplateContext, Template } from "../types"
-import { getOptionsTable, getCommandsTable } from "../utils"
+import type { TemplateContext, Template } from "../types.js"
+import { getOptionsTable, getCommandsTable } from "../utils.js"
 
 export const program: Template = async (ctx: TemplateContext) => {
   const { prog, globalOptions, eol, eol3, colorize, tpl } = ctx

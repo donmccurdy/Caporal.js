@@ -2,10 +2,10 @@
  * @packageDocumentation
  * @module caporal/types
  */
-import type { Argument, Option, Promisable, ParserResult } from "../types"
+import type { Argument, Option, Promisable, ParserResult } from "../types.js"
 import type tabtab from "tabtab"
-import type { Command } from "../command"
-import type { Program } from "../program"
+import type { Command } from "../command/index.js"
+import type { Program } from "../program/index.js"
 
 export interface CompletionItem {
   name: string

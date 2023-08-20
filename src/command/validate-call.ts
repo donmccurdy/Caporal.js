@@ -2,10 +2,10 @@
  * @packageDocumentation
  * @internal
  */
-import { ParserResult, ParserProcessedResult } from "../types"
-import { validateArgs } from "../argument/validate"
-import { validateOptions } from "../option/validate"
-import type { Command } from "."
+import { ParserResult, ParserProcessedResult } from "../types.js"
+import { validateArgs } from "../argument/validate.js"
+import { validateOptions } from "../option/validate.js"
+import type { Command } from "./index.js"
 
 export async function validateCall(
   cmd: Command,

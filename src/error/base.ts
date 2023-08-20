@@ -3,7 +3,7 @@
  * @internal
  */
 
-import { ErrorMetadata } from "../types"
+import { ErrorMetadata } from "../types.js"
 
 export class BaseError extends Error {
   public meta: ErrorMetadata

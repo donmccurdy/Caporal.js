@@ -3,8 +3,8 @@
  * @internal
  */
 
-import type { Command } from "../command"
-import type { Option } from "../types"
+import type { Command } from "../command/index.js"
+import type { Option } from "../types.js"
 
 /**
  * Find an option from its name for a given command

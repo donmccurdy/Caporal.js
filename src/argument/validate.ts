@@ -3,8 +3,8 @@
  * @internal
  */
 
-import reduce from "lodash/reduce"
-import { TooManyArgumentsError, MissingArgumentError, BaseError } from "../error"
+import reduce from "lodash/reduce.js"
+import { TooManyArgumentsError, MissingArgumentError, BaseError } from "../error/index.js"
 import type {
   Argument,
   ArgumentsRange,
@@ -12,11 +12,11 @@ import type {
   ParsedArgumentsObject,
   ParsedArgument,
   Promisable,
-} from "../types"
+} from "../types.js"
 
-import type { Command } from "../command"
-import { validate } from "../validator/validate"
-import { findArgument } from "./find"
+import type { Command } from "../command/index.js"
+import { validate } from "../validator/validate.js"
+import { findArgument } from "./find.js"
 
 /**
  * Get the number of required argument for a given command

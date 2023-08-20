@@ -3,11 +3,11 @@
  * @internal
  */
 
-import camelCase from "lodash/camelCase"
+import camelCase from "lodash/camelCase.js"
 import kebabCase from "lodash/kebabCase.js"
-import { OptionSynopsisSyntaxError } from "../error"
-import { OptionValueType } from "../types"
-import type { OptionSynopsis, ParserTypes } from "../types"
+import { OptionSynopsisSyntaxError } from "../error/index.js"
+import { OptionValueType } from "../types.js"
+import type { OptionSynopsis, ParserTypes } from "../types.js"
 
 const REG_SHORT_OPT = /^-[a-z]$/i
 const REG_LONG_OPT = /^--[a-z]{2,}/i

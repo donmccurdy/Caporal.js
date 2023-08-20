@@ -3,18 +3,18 @@
  * @internal
  */
 
-import type { ParserTypes, Argument, Option } from "../types"
-import { CaporalValidator } from "../types"
-import { ValidationError } from "../error"
-import { isNumeric } from "../option/utils"
-import flatMap from "lodash/flatMap"
+import type { ParserTypes, Argument, Option } from "../types.js"
+import { CaporalValidator } from "../types.js"
+import { ValidationError } from "../error/index.js"
+import { isNumeric } from "../option/utils.js"
+import flatMap from "lodash/flatMap.js"
 
 import {
   isNumericValidator,
   isStringValidator,
   isBoolValidator,
   isArrayValidator,
-} from "./utils"
+} from "./utils.js"
 
 // Re-export for convenience
 export { CaporalValidator }

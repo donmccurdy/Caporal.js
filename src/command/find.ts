@@ -2,10 +2,10 @@
  * @packageDocumentation
  * @internal
  */
-import type { Program } from "../program"
-import type { Command } from "."
-import { importCommand } from "./import"
-import { createCommand } from "."
+import type { Program } from "../program/index.js"
+import type { Command } from "./index.js"
+import { importCommand } from "./import.js"
+import { createCommand } from "./index.js"
 import path from "path"
 
 export async function findCommand(

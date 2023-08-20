@@ -2,10 +2,10 @@
   "include": ["src/**/*.ts"],
   "compilerOptions": {
     "paths": { "@donmccurdy/caporal": ["./"] },
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "typeRoots": ["node_modules/@types"],
     "target": "ES2020",
-    "module": "ES2020",
+    "module": "ESNext",
     "lib": ["ES2020"],
     "esModuleInterop": true,
     "skipLibCheck": true,

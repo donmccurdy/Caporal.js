@@ -10,13 +10,13 @@ import type {
   ParsedArgument,
   Argument,
   Option,
-} from "../types"
+} from "../types.js"
 
-import { validateWithRegExp } from "./regexp"
-import { validateWithArray } from "./array"
-import { validateWithFunction } from "./function"
-import { validateWithCaporal } from "./caporal"
-import { isCaporalValidator } from "./utils"
+import { validateWithRegExp } from "./regexp.js"
+import { validateWithArray } from "./array.js"
+import { validateWithFunction } from "./function.js"
+import { validateWithCaporal } from "./caporal.js"
+import { isCaporalValidator } from "./utils.js"
 
 export function validate(
   value: ParsedOption | ParsedArgument,

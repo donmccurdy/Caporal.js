@@ -4,8 +4,8 @@
  * @packageDocumentation
  * @internal
  */
-import type { Program } from "../../program"
-import type { Argument, Option } from "../../types"
+import type { Program } from "../../program/index.js"
+import type { Argument, Option } from "../../types.js"
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @typescript-eslint/no-unused-vars */

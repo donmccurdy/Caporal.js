@@ -6,9 +6,9 @@
  */
 //
 import { Logger as WinstonLogger } from "winston"
-import { Program } from "./program"
-import { Command } from "./command"
-import { BaseError } from "./error"
+import { Program } from "./program/index.js"
+import { Command } from "./command/index.js"
+import { BaseError } from "./error/index.js"
 
 /**
  * The Caporal logger interface. It extends the [Winston](https://github.com/winstonjs/winston) Logger interface

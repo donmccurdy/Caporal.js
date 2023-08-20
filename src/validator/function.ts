@@ -3,8 +3,8 @@
  * @internal
  */
 
-import type { ParserTypes, FunctionValidator, Argument, Option } from "../types"
-import { ValidationError } from "../error"
+import type { ParserTypes, FunctionValidator, Argument, Option } from "../types.js"
+import { ValidationError } from "../error/index.js"
 
 export async function validateWithFunction(
   validator: FunctionValidator,

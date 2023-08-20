@@ -3,14 +3,14 @@
  * @internal
  */
 
-import reduce from "lodash/reduce"
-import { findOption } from "./find"
-import { MissingFlagError, UnknownOptionError, BaseError } from "../error"
-import { findGlobalOption } from "."
-import { validate } from "../validator/validate"
+import reduce from "lodash/reduce.js"
+import { findOption } from "./find.js"
+import { MissingFlagError, UnknownOptionError, BaseError } from "../error/index.js"
+import { findGlobalOption } from "./index.js"
+import { validate } from "../validator/validate.js"
 
-import type { ParsedOption, ParsedOptions, Promisable, Option } from "../types"
-import type { Command } from "../command"
+import type { ParsedOption, ParsedOptions, Promisable, Option } from "../types.js"
+import type { Command } from "../command/index.js"
 
 function validateOption(opt: Option, value: ParsedOption): ReturnType<typeof validate> {
   return opt.validator ? validate(value, opt.validator, opt) : value

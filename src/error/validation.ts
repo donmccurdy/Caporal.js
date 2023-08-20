@@ -5,9 +5,9 @@
 
 import { format } from "util"
 import c from "chalk"
-import { BaseError } from "./base"
-import { Validator, ParserTypes, Argument, Option, CaporalValidator } from "../types"
-import { isCaporalValidator } from "../validator/utils"
+import { BaseError } from "./base.js"
+import { Validator, ParserTypes, Argument, Option, CaporalValidator } from "../types.js"
+import { isCaporalValidator } from "../validator/utils.js"
 
 interface ValidationErrorParameters {
   value: ParserTypes | ParserTypes[]

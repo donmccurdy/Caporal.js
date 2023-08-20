@@ -3,8 +3,8 @@
  * @internal
  */
 
-import type { ParserTypes, Argument, Option } from "../types"
-import { ValidationError } from "../error"
+import type { ParserTypes, Argument, Option } from "../types.js"
+import { ValidationError } from "../error/index.js"
 
 /**
  * Validate using a RegExp

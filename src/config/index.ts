@@ -2,7 +2,7 @@
  * @packageDocumentation
  * @internal
  */
-import type { Configurator } from "../types"
+import type { Configurator } from "../types.js"
 
 export function createConfigurator<T extends {}>(defaults: T): Configurator<T> {
   const _defaults = defaults

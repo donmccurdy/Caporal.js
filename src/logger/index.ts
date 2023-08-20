@@ -5,8 +5,8 @@
 import { createLogger as winstonCreateLogger, transports, format } from "winston"
 import { inspect } from "util"
 import chalk from "chalk"
-import type { Logger } from "../types"
-import replace from "lodash/replace"
+import type { Logger } from "../types.js"
+import replace from "lodash/replace.js"
 import { EOL } from "os"
 
 const caporalFormat = format.printf((data) => {

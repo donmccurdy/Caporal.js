@@ -2,7 +2,7 @@
  * @packageDocumentation
  * @internal
  */
-import type { TemplateContext, Template } from "../types"
+import type { TemplateContext, Template } from "../types.js"
 
 export const usage: Template = async (ctx: TemplateContext) => {
   const { tpl, prog, chalk: c, spaces, eol } = ctx

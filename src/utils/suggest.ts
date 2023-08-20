@@ -3,7 +3,7 @@
  * @internal
  */
 import chalk from "chalk"
-import { levenshtein } from "./levenshtein"
+import { levenshtein } from "./levenshtein.js"
 
 interface Suggestion {
   distance: number

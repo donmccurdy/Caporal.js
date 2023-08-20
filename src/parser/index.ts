@@ -2,15 +2,15 @@
  * @packageDocumentation
  * @module parser
  */
-import invert from "lodash/invert"
-import findIndex from "lodash/findIndex"
+import invert from "lodash/invert.js"
+import findIndex from "lodash/findIndex.js"
 import type {
   ParserOptions,
   ParserResult,
   ParserTypes,
   ParsedOptions,
   ParsedArguments,
-} from "../types"
+} from "../types.js"
 import {
   isNumeric,
   isConcatenatedOpt,
@@ -18,7 +18,7 @@ import {
   isOptionStr,
   formatOptName,
   isOptArray,
-} from "../option/utils"
+} from "../option/utils.js"
 
 const DDASH = "--"
 

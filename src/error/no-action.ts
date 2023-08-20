@@ -3,8 +3,8 @@
  * @internal
  */
 
-import { BaseError } from "./base"
-import { Command } from "../command"
+import { BaseError } from "./base.js"
+import { Command } from "../command/index.js"
 
 export class NoActionError extends BaseError {
   constructor(cmd?: Command) {
