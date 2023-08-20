@@ -6,7 +6,10 @@
   "sideEffects": false,
   "source": "./src/index.ts",
   "types": "./dist/index.d.ts",
-  "exports": "./dist/caporal.modern.js",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/caporal.modern.js"
+  },
   "scripts": {
     "lint": "eslint src/**/*.ts examples",
     "lint:fix": "eslint --fix src/**/*.ts examples/**/*.{ts,js}",
