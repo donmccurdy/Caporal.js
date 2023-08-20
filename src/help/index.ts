@@ -2,15 +2,15 @@
  * @packageDocumentation
  * @module caporal/help
  */
-import { Command } from "../command"
-import { Program } from "../program"
-import replace from "lodash/replace"
+import { Command } from "../command/index.js"
+import { Program } from "../program/index.js"
+import replace from "lodash/replace.js"
 import chalk from "chalk"
-import { buildTable } from "./utils"
-import { colorize } from "../utils/colorize"
-import * as allTemplates from "./templates"
-import { getGlobalOptions } from "../option"
-import { CustomizedHelpMap, CustomizedHelpOpts, TemplateContext, Template } from "./types"
+import { buildTable } from "./utils.js"
+import { colorize } from "../utils/colorize.js"
+import * as allTemplates from "./templates/index.js"
+import { getGlobalOptions } from "../option/index.js"
+import { CustomizedHelpMap, CustomizedHelpOpts, TemplateContext, Template } from "./types.js"
 
 const templates = new Map(Object.entries(allTemplates))
 const customHelpMap: CustomizedHelpMap = new Map()

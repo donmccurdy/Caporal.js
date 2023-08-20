@@ -3,7 +3,7 @@
  * @internal
  */
 
-import { BaseError } from "./base"
+import { BaseError } from "./base.js"
 
 export class OptionSynopsisSyntaxError extends BaseError {
   constructor(synopsis: string) {

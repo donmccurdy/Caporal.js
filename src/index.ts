@@ -64,9 +64,9 @@
  * @packageDocumentation
  * @module @caporal/core
  */
-import { Program } from "./program"
-export { Command } from "./command"
-export * from "./types"
+import { Program } from "./program/index.js"
+export { Command } from "./command/index.js"
+export * from "./types.js"
 
 /**
  * @ignore
@@ -75,7 +75,7 @@ export { default as chalk } from "chalk"
 /**
  * @ignore
  */
-export { parseArgv, parseLine } from "./parser"
+export { parseArgv, parseLine } from "./parser/index.js"
 
 /**
  * @ignore

@@ -3,8 +3,8 @@
  * @internal
  */
 
-import { logger } from "../logger"
-import type { BaseError } from "./base"
+import { logger } from "../logger/index.js"
+import type { BaseError } from "./base.js"
 
 /**
  * @param err - Error object

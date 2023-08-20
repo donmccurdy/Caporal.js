@@ -2,7 +2,7 @@
  * @packageDocumentation
  * @internal
  */
-import type { TemplateContext, Template } from "../types"
+import type { TemplateContext, Template } from "../types.js"
 
 export const header: Template = (ctx: TemplateContext) => {
   const { prog, chalk: c, spaces, eol, eol2 } = ctx

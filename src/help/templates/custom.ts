@@ -2,7 +2,7 @@
  * @packageDocumentation
  * @internal
  */
-import type { TemplateContext, Template } from "../types"
+import type { TemplateContext, Template } from "../types.js"
 
 export const custom: Template = (ctx: TemplateContext) => {
   const { prog, cmd, eol2, eol3, chalk, colorize, customHelp, indent } = ctx

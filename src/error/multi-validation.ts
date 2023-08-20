@@ -3,10 +3,10 @@
  * @internal
  */
 
-import { BaseError } from "./base"
+import { BaseError } from "./base.js"
 import chalk from "chalk"
-import { colorize } from "../utils/colorize"
-import type { Command } from "../command"
+import { colorize } from "../utils/colorize.js"
+import type { Command } from "../command/index.js"
 
 export class ValidationSummaryError extends BaseError {
   constructor(cmd: Command, errors: BaseError[]) {

@@ -3,15 +3,15 @@
  * @internal
  */
 
-import { BaseError } from "./base"
-import type { Option } from "../types"
-import { getDashedOpt } from "../option/utils"
-import { getGlobalOptions } from "../option"
-import { getSuggestions, boldDiffString } from "../utils/suggest"
+import { BaseError } from "./base.js"
+import type { Option } from "../types.js"
+import { getDashedOpt } from "../option/utils.js"
+import { getGlobalOptions } from "../option/index.js"
+import { getSuggestions, boldDiffString } from "../utils/suggest.js"
 import c from "chalk"
-import type { Command } from "../command"
-import filter from "lodash/fp/filter"
-import map from "lodash/fp/map"
+import type { Command } from "../command/index.js"
+import filter from "lodash/fp/filter.js"
+import map from "lodash/fp/map.js"
 
 /**
  * @todo Rewrite

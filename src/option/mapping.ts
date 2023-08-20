@@ -3,11 +3,11 @@
  * @internal
  */
 
-import type { Command } from "../command"
-import map from "lodash/map"
-import zipObject from "lodash/zipObject"
-import invert from "lodash/invert"
-import pickBy from "lodash/pickBy"
+import type { Command } from "../command/index.js"
+import map from "lodash/map.js"
+import zipObject from "lodash/zipObject.js"
+import invert from "lodash/invert.js"
+import pickBy from "lodash/pickBy.js"
 
 export function getOptsMapping(cmd: Command): Record<string, string> {
   const names = map(cmd.options, "name")

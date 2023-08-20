@@ -4,7 +4,7 @@
  * @packageDocumentation
  * @internal
  */
-import { CommandCreator } from "../types"
+import { CommandCreator } from "../types.js"
 import path from "path"
 
 export async function importCommand(file: string): Promise<CommandCreator> {

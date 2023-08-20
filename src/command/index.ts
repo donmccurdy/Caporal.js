@@ -2,16 +2,16 @@
  * @packageDocumentation
  * @module caporal/command
  */
-import { validateCall } from "./validate-call"
-import { logger } from "../logger"
-import { createArgument } from "../argument"
-import { createOption, processGlobalOptions } from "../option"
-import { registerCompletion } from "../autocomplete"
-import { Completer } from "../autocomplete/types"
-import { getOptsMapping } from "../option/mapping"
-import { isStringValidator, isBoolValidator } from "../validator/utils"
-import type { Program } from "../program"
-import { ActionError, NoActionError, BaseError, ValidationSummaryError } from "../error"
+import { validateCall } from "./validate-call.js"
+import { logger } from "../logger/index.js"
+import { createArgument } from "../argument/index.js"
+import { createOption, processGlobalOptions } from "../option/index.js"
+import { registerCompletion } from "../autocomplete/index.js"
+import { Completer } from "../autocomplete/types.js"
+import { getOptsMapping } from "../option/mapping.js"
+import { isStringValidator, isBoolValidator } from "../validator/utils.js"
+import type { Program } from "../program/index.js"
+import { ActionError, NoActionError, BaseError, ValidationSummaryError } from "../error/index.js"
 import {
   Action,
   ParserOptions,
@@ -22,10 +22,10 @@ import {
   Configurator,
   CommandConfig,
   CreateOptionCommandOpts,
-} from "../types"
-import { CustomizedHelpOpts } from "../help/types"
-import { customizeHelp } from "../help"
-import { createConfigurator } from "../config"
+} from "../types.js"
+import { CustomizedHelpOpts } from "../help/types.js"
+import { customizeHelp } from "../help/index.js"
+import { createConfigurator } from "../config/index.js"
 
 /**
  * @ignore

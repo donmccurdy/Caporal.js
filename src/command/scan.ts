@@ -3,13 +3,13 @@
  * @internal
  */
 import path from "path"
-import zipObject from "lodash/zipObject"
-import map from "lodash/map"
-import { readdir } from "../utils/fs"
-import { importCommand } from "./import"
-import { createCommand } from "."
-import type { Command } from "."
-import type { Program } from "../program"
+import zipObject from "lodash/zipObject.js"
+import map from "lodash/map.js"
+import { readdir } from "../utils/fs.js"
+import { importCommand } from "./import.js"
+import { createCommand } from "./index.js"
+import type { Command } from "./index.js"
+import type { Program } from "../program/index.js"
 
 export async function scanCommands(
   program: Program,

@@ -3,7 +3,7 @@
  * @internal
  */
 
-import { BaseError } from "./base"
+import { BaseError } from "./base.js"
 
 export class ActionError extends BaseError {
   constructor(error: string | Error) {

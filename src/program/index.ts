@@ -6,24 +6,24 @@ import { EventEmitter } from "events"
 import fs from "fs"
 import path from "path"
 import kebabCase from "lodash/kebabCase.js"
-import mapKeys from "lodash/mapKeys"
-import { createCommand, HELP_CMD, PROG_CMD } from "../command"
-import { Command } from "../command"
-import { findCommand } from "../command/find"
-import { scanCommands } from "../command/scan"
-import { createConfigurator } from "../config"
-import { fatalError, UnknownOrUnspecifiedCommandError } from "../error"
-import { customizeHelp } from "../help"
-import { CustomizedHelpOpts } from "../help/types"
-import { logger, setLogger } from "../logger"
+import mapKeys from "lodash/mapKeys.js"
+import { createCommand, HELP_CMD, PROG_CMD } from "../command/index.js"
+import { Command } from "../command/index.js"
+import { findCommand } from "../command/find.js"
+import { scanCommands } from "../command/scan.js"
+import { createConfigurator } from "../config/index.js"
+import { fatalError, UnknownOrUnspecifiedCommandError } from "../error/index.js"
+import { customizeHelp } from "../help/index.js"
+import { CustomizedHelpOpts } from "../help/types.js"
+import { logger, setLogger } from "../logger/index.js"
 import {
   addGlobalOption,
   createOption,
   disableGlobalOption,
   processGlobalOptions,
   showHelp,
-} from "../option"
-import { parseArgv } from "../parser"
+} from "../option/index.js"
+import { parseArgv } from "../parser/index.js"
 import {
   Action,
   Logger,
@@ -35,9 +35,9 @@ import {
   CreateOptionProgramOpts,
   CommandConfig,
   ParserProcessedResult,
-} from "../types"
-import { CaporalValidator } from "../types"
-import { detectVersion } from "../utils/version"
+} from "../types.js"
+import { CaporalValidator } from "../types.js"
+import { detectVersion } from "../utils/version.js"
 
 const LOG_LEVEL_ENV_VAR = "CAPORAL_LOG_LEVEL"
 // const SUPPORTED_SHELL = ["bash", "zsh", "fish"]

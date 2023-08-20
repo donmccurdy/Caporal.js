@@ -2,12 +2,12 @@
  * @packageDocumentation
  * @module caporal/types
  */
-import { Command } from "../command"
-import { Program } from "../program"
+import { Command } from "../command/index.js"
+import { Program } from "../program/index.js"
 import chalk from "chalk"
-import { colorize } from "../utils/colorize"
-import { buildTable } from "./utils"
-import type { GlobalOptions } from "../types"
+import { colorize } from "../utils/colorize.js"
+import { buildTable } from "./utils.js"
+import type { GlobalOptions } from "../types.js"
 
 export interface CustomizedHelpOpts {
   /**

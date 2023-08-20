@@ -2,8 +2,8 @@
  * @packageDocumentation
  * @internal
  */
-export * from "./command"
-export * from "./header"
-export * from "./program"
-export * from "./usage"
-export * from "./custom"
+export * from "./command.js"
+export * from "./header.js"
+export * from "./program.js"
+export * from "./usage.js"
+export * from "./custom.js"

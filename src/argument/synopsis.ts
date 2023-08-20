@@ -2,8 +2,8 @@
  * @packageDocumentation
  * @internal
  */
-import type { ArgumentSynopsis } from "../types"
-import { getCleanNameFromNotation } from "../option/utils"
+import type { ArgumentSynopsis } from "../types.js"
+import { getCleanNameFromNotation } from "../option/utils.js"
 
 /**
  * Check if the argument is explicitly required

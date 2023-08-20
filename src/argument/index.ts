@@ -2,9 +2,9 @@
  * @packageDocumentation
  * @internal
  */
-import type { Argument, CreateArgumentOpts } from "../types"
-import { checkValidator, getTypeHint } from "../validator/utils"
-import { parseArgumentSynopsis } from "./synopsis"
+import type { Argument, CreateArgumentOpts } from "../types.js"
+import { checkValidator, getTypeHint } from "../validator/utils.js"
+import { parseArgumentSynopsis } from "./synopsis.js"
 
 /**
  *

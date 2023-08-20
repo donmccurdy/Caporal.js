@@ -12,14 +12,14 @@ import {
   ActionParameters,
   GlobalOptions,
   ParserProcessedResult,
-} from "../types"
-import { checkValidator, isBoolValidator, getTypeHint } from "../validator/utils"
-import { parseOptionSynopsis } from "./utils"
-import { logger } from "../logger"
-import type { Command } from "../command"
-import type { Program } from "../program"
-import { getHelp } from "../help"
-import { installCompletion, uninstallCompletion } from "../autocomplete"
+} from "../types.js"
+import { checkValidator, isBoolValidator, getTypeHint } from "../validator/utils.js"
+import { parseOptionSynopsis } from "./utils.js"
+import { logger } from "../logger/index.js"
+import type { Command } from "../command/index.js"
+import type { Program } from "../program/index.js"
+import { getHelp } from "../help/index.js"
+import { installCompletion, uninstallCompletion } from "../autocomplete/index.js"
 
 /**
  * Create an Option object

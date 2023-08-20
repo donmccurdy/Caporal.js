@@ -3,12 +3,12 @@
  * @internal
  */
 
-import { BaseError } from "./base"
-import { getSuggestions, boldDiffString } from "../utils/suggest"
+import { BaseError } from "./base.js"
+import { getSuggestions, boldDiffString } from "../utils/suggest.js"
 import chalk from "chalk"
-import type { Program } from "../program"
-import flatMap from "lodash/flatMap"
-import filter from "lodash/filter"
+import type { Program } from "../program/index.js"
+import flatMap from "lodash/flatMap.js"
+import filter from "lodash/filter.js"
 import wrap from "wrap-ansi"
 
 /**

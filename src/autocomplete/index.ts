@@ -3,17 +3,17 @@
  * @module caporal/autocomplete
  */
 import tabtab from "tabtab"
-import { parseArgv } from "../parser"
-import { Program } from "../program"
-import { removeCommandFromArgs } from "../argument/validate"
-import { Argument, Option } from "../types"
-import { Command } from "../command"
-import { isOptionObject } from "../option"
-import { findCommand } from "../command/find"
-import filter from "lodash/filter"
-import flatMap from "lodash/flatMap"
+import { parseArgv } from "../parser/index.js"
+import { Program } from "../program/index.js"
+import { removeCommandFromArgs } from "../argument/validate.js"
+import { Argument, Option } from "../types.js"
+import { Command } from "../command/index.js"
+import { isOptionObject } from "../option/index.js"
+import { findCommand } from "../command/find.js"
+import filter from "lodash/filter.js"
+import flatMap from "lodash/flatMap.js"
 
-import { Completions, Completer, CompletionItem, CompletionContext } from "./types"
+import { Completions, Completer, CompletionItem, CompletionContext } from "./types.js"
 
 const completions: Completions = new Map()
 

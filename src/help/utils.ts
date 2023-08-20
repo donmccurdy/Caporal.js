@@ -3,10 +3,10 @@
  * @internal
  */
 import { table, getBorderCharacters } from "table"
-import filter from "lodash/filter"
-import type { TemplateContext } from "./types"
-import type { Option, Argument } from "../types"
-import type { Command } from "../command"
+import filter from "lodash/filter.js"
+import type { TemplateContext } from "./types.js"
+import type { Option, Argument } from "../types.js"
+import type { Command } from "../command/index.js"
 
 export function buildTable(data: string[][], options = {}): string {
   return table(data, {

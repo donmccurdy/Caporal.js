@@ -3,9 +3,9 @@
  * @internal
  */
 
-import { BaseError } from "./base"
-import { ArgumentsRange } from "../types"
-import { Command } from "../command"
+import { BaseError } from "./base.js"
+import { ArgumentsRange } from "../types.js"
+import { Command } from "../command/index.js"
 import { format } from "util"
 import c from "chalk"
 
