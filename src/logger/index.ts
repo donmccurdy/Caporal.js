@@ -4,7 +4,7 @@
  */
 import { createLogger as winstonCreateLogger, transports, format } from "winston"
 import { inspect } from "util"
-import { default as chalk, supportsColor } from "chalk"
+import chalk from "chalk"
 import type { Logger } from "../types"
 import replace from "lodash/replace"
 import { EOL } from "os"
@@ -95,6 +95,6 @@ export function createDefaultLogger(): Logger {
     logger.transports[0].format = caporalFormat
     logger.colorsEnabled = false
   }
-  logger.colorsEnabled = supportsColor !== false
+  logger.colorsEnabled = chalk.supportsColor !== false
   return logger
 }
