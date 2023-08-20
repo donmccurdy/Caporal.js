@@ -4,7 +4,7 @@
  */
 
 import camelCase from "lodash/camelCase"
-import kebabCase from "lodash/kebabCase"
+import kebabCase from "lodash/kebabCase.js"
 import { OptionSynopsisSyntaxError } from "../error"
 import { OptionValueType } from "../types"
 import type { OptionSynopsis, ParserTypes } from "../types"
