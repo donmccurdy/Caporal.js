@@ -20,7 +20,10 @@
     "test": "jest src",
     "test:ci": "jest --coverage src",
     "test:dist": "ava dist-tests/**/*.spec.ts",
-    "test:watch": "jest --silent --coverage --watchAll src"
+    "test:watch": "jest --silent --coverage --watchAll src",
+    "preversion": "npm run build && npm run test:dist",
+    "version": "npm run build && git add -u",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "files": [
     "dist/**/*.{ts,js}"
