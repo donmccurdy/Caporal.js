@@ -5,7 +5,7 @@
 import { EventEmitter } from "events"
 import fs from "fs"
 import path from "path"
-import kebabCase from "lodash/kebabCase"
+import kebabCase from "lodash/kebabCase.js"
 import mapKeys from "lodash/mapKeys"
 import { createCommand, HELP_CMD, PROG_CMD } from "../command"
 import { Command } from "../command"
