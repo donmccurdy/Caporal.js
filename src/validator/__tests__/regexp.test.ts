@@ -7,22 +7,16 @@ import { ValidationError } from "../../error/index.js"
 const arg = createArgument("<fake>", "Fake arg")
 const opt = createOption("--file <file>", "File")
 
+const isError = { instanceOf: ValidationError }
+
 test("should validate a valid string", (t) => {
   t.is(validateWithRegExp(/^ex/, "example", arg), "example", "arg")
   t.is(validateWithRegExp(/^ex/, "example", opt), "example", "opt")
 })
 
 test("should throw for an invalid string", (t) => {
-  t.throws(
-    () => validateWithRegExp(/^ex/, "invalid", arg),
-    { instanceOf: ValidationError },
-    "arg",
-  )
-  t.throws(
-    () => validateWithRegExp(/^ex/, "invalid", opt),
-    { instanceOf: ValidationError },
-    "opt",
-  )
+  t.throws(() => validateWithRegExp(/^ex/, "invalid", arg), isError, "arg")
+  t.throws(() => validateWithRegExp(/^ex/, "invalid", opt), isError, "opt")
 })
 
 test("should validate a valid string[]", (t) => {
@@ -39,14 +33,6 @@ test("should validate a valid string[]", (t) => {
 })
 
 test("should throw for an invalid string[]", (t) => {
-  t.throws(
-    () => validateWithRegExp(/^ex/, ["example", "invalid"], arg),
-    { instanceOf: ValidationError },
-    "arg",
-  )
-  t.throws(
-    () => validateWithRegExp(/^ex/, ["example", "invalid"], opt),
-    { instanceOf: ValidationError },
-    "opt",
-  )
+  t.throws(() => validateWithRegExp(/^ex/, ["example", "invalid"], arg), isError, "arg")
+  t.throws(() => validateWithRegExp(/^ex/, ["example", "invalid"], opt), isError, "opt")
 })
