@@ -15,14 +15,17 @@ const caporalFormat = format.printf((data) => {
   let prefix = ""
 
   const levelStr = getLevelString(level)
-  const metaStr = formatMeta(meta)
+  const metaStr = formatMeta(meta as unknown as Record<string, unknown>)
 
   if (metaStr !== "") {
     message += `${EOL}${levelStr}: ${metaStr}`
   }
 
   if (level === "error") {
-    const spaces = " ".repeat(meta.paddingLeft || 7)
+    // TODO(cleanup)
+    const paddingLeft = (meta as unknown as { paddingLeft: number | undefined })
+      .paddingLeft
+    const spaces = " ".repeat(paddingLeft || 7)
     prefix = EOL
     message = `${replace(message, new RegExp(EOL, "g"), EOL + spaces)}${EOL}`
   }
@@ -32,9 +35,9 @@ const caporalFormat = format.printf((data) => {
 
 function formatMeta(meta: Record<string, unknown>): string {
   delete meta.message
-  delete meta[(Symbol.for("level") as unknown) as string]
-  delete meta[(Symbol.for("message") as unknown) as string]
-  delete meta[(Symbol.for("splat") as unknown) as string]
+  delete meta[Symbol.for("level") as unknown as string]
+  delete meta[Symbol.for("message") as unknown as string]
+  delete meta[Symbol.for("splat") as unknown as string]
   if (Object.keys(meta).length) {
     return inspect(meta, {
       showHidden: false,
