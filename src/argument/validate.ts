@@ -148,7 +148,7 @@ export async function validateArgs(
         }
         acc[key] = validateArg(arg, value)
       } catch (e) {
-        errors.push(e)
+        errors.push(e as BaseError)
       }
       return acc
     },

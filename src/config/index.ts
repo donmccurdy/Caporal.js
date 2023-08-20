@@ -4,7 +4,7 @@
  */
 import type { Configurator } from "../types"
 
-export function createConfigurator<T>(defaults: T): Configurator<T> {
+export function createConfigurator<T extends {}>(defaults: T): Configurator<T> {
   const _defaults = defaults
   let config = defaults
   return {
@@ -19,7 +19,8 @@ export function createConfigurator<T>(defaults: T): Configurator<T> {
       return config
     },
     set(props: Partial<T>): T {
-      return Object.assign(config, props)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      return Object.assign(config as any, props)
     },
   }
 }
