@@ -6,17 +6,19 @@
   "sideEffects": false,
   "source": "./src/index.ts",
   "types": "./dist/index.d.ts",
+  "main": "./dist/caporal.cjs",
   "exports": {
     "types": "./dist/index.d.ts",
+    "require": "./dist/caporal.cjs",
     "default": "./dist/caporal.modern.js"
   },
   "scripts": {
     "lint": "eslint src/**/*.ts examples",
     "lint:fix": "eslint --fix src/**/*.ts examples/**/*.{ts,js}",
     "prebuild": "npm run clean",
-    "build": "microbundle --format modern --target node --no-compress",
+    "build": "microbundle --format modern,cjs --target node --no-compress",
     "build:ci": "npm run build",
-    "watch": "microbundle watch --format modern --target node --no-compress",
+    "watch": "microbundle watch --format modern,cjs --target node --no-compress",
     "postbuild:ci": "npm run test:ci",
     "refresh-markdown": "./scripts/gen-contributors.js && ./scripts/gen-dependents.js && ./scripts/gen-readme.js",
     "clean": "rimraf dist",
