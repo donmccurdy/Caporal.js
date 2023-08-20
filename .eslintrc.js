@@ -3,7 +3,6 @@ module.exports = {
   env: {
     node: true,
     es6: true,
-    jest: true,
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -19,9 +18,8 @@ module.exports = {
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
         "prettier/@typescript-eslint",
-        "plugin:jest/recommended",
       ],
-      plugins: ["@typescript-eslint", "jest"],
+      plugins: ["@typescript-eslint"],
       rules: {
         "@typescript-eslint/explicit-function-return-type": [
           "warn",
