@@ -85,9 +85,4 @@ export const program = new Program()
 /**
  * @ignore
  */
-export default program
-
-/**
- * @ignore
- */
 export { Program }
