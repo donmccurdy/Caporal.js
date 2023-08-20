@@ -25,7 +25,7 @@
     "test": "ava src/**/*.test.ts",
     "test:ci": "echo \"not implemented\"",
     "test:dist": "ava dist-tests/**/*.test.ts",
-    "preversion": "npm run build && npm run test:dist",
+    "preversion": "npm run build && npm run test && npm run test:dist",
     "version": "npm run build && git add -u",
     "postversion": "git push && git push --tags && npm publish"
   },
