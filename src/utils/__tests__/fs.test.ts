@@ -9,7 +9,7 @@ test("should resolve to a file list on success", async (t) => {
   const files = await readdir(__dirname)
   t.deepEqual(
     files.sort(),
-    ["fs.test.ts", "levenshtein.spec.ts", "suggest.spec.ts"],
+    ["fs.test.ts", "levenshtein.test.ts", "suggest.test.ts"],
     "resolves file list",
   )
 })
