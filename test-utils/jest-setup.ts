@@ -1,7 +1,7 @@
 /*
 Winston `Console transport` uses console._stdout.write()
 to log things, which is polluting jest logs, so let's
-overwrite that 
+overwrite that
 */
 Object.defineProperty(global.console, "_stdout", {
   value: {
