@@ -19,7 +19,6 @@ import { logger } from "../logger/index.js"
 import type { Command } from "../command/index.js"
 import type { Program } from "../program/index.js"
 import { getHelp } from "../help/index.js"
-import { installCompletion, uninstallCompletion } from "../autocomplete/index.js"
 
 /**
  * Create an Option object
@@ -121,13 +120,13 @@ const showHelp: Action = async ({ program, command }: ActionParameters) => {
    * Install completion
    */
   installComp: Action = ({ program }: ActionParameters) => {
-    return installCompletion(program)
+    throw new Error("Completion not supported.")
   },
   /**
    * Uninstall completion
    */
   uninstallComp: Action = ({ program }: ActionParameters) => {
-    return uninstallCompletion(program)
+    throw new Error("Completion not supported.")
   }
 
 /**

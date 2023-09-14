@@ -6,12 +6,15 @@ import { validateCall } from "./validate-call.js"
 import { logger } from "../logger/index.js"
 import { createArgument } from "../argument/index.js"
 import { createOption, processGlobalOptions } from "../option/index.js"
-import { registerCompletion } from "../autocomplete/index.js"
-import { Completer } from "../autocomplete/types.js"
 import { getOptsMapping } from "../option/mapping.js"
 import { isStringValidator, isBoolValidator } from "../validator/utils.js"
 import type { Program } from "../program/index.js"
-import { ActionError, NoActionError, BaseError, ValidationSummaryError } from "../error/index.js"
+import {
+  ActionError,
+  NoActionError,
+  BaseError,
+  ValidationSummaryError,
+} from "../error/index.js"
 import {
   Action,
   ParserOptions,
@@ -324,14 +327,8 @@ export class Command {
   /**
    * Auto-complete
    */
-  complete(completer: Completer): Command {
-    if (!this._lastAddedArgOrOpt) {
-      throw new Error(
-        "Caporal setup error: you should only call `.complete()` after .argument() or .option().",
-      )
-    }
-    registerCompletion(this._lastAddedArgOrOpt, completer)
-    return this
+  complete(completer: unknown): Command {
+    throw new Error("Completion not supported.")
   }
 
   /**
