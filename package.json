@@ -1,6 +1,6 @@
 {
   "name": "@donmccurdy/caporal",
-  "version": "0.1.0",
+  "version": "0.0.9",
   "description": "A full-featured framework for building command line applications (cli) with node.js",
   "type": "module",
   "sideEffects": false,
